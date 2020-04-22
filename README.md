@@ -9,7 +9,7 @@ https://virtualenvwrapper.readthedocs.io/en/latest/install.html
 
 2- mkvirtualenv --python=python3.8.2 live_blog
 - python --version
-=> para alterar o ambiente virtual (mudar de uma ambiente para outro)
+  => para alterar o ambiente virtual (mudar de uma ambiente para outro)
 - workon pythoneggs
 
 (liveblog) liveblog $ tree
@@ -142,5 +142,15 @@ class BlogConfig(AppConfig):
     INSTALLED_APPS = INSTALLED_APPS + PROJECT_APPS
 
 12 - Implementar a classe no file models.py
-- quando criamos uma classe npo models.py, implicará na criação de uma tabela
-  no BD
+- quando criamos uma classe no models.py, implicará na criação de uma tabela
+  no BD.
+- metodo __str__()
+  representa a instancia da classe Post.
+  
+13- Depois de criar a classe no file models.py
+- (.venv) liveblogPro $ mng makemigrations
+- (.venv) liveblogPro $ mng migrate
+    Operations to perform:
+        Apply all migrations: admin, auth, blog, contenttypes, sessions
+    Running migrations:
+        Applying blog.0001_initial... OK
